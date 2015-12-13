@@ -436,8 +436,21 @@ extension FlagKit {
             Special.Europe,
             Special.Africa,
             Special.Asia,
-            Special.Oceania
+            Special.Oceania,
         ]
+    }
+}
+
+extension FlagKit {
+    
+    public typealias Country = (flag: NSImage?, name: String)
+    
+    public static func allFlagsAndNames() -> [Country] {
+        return Array(zip(allFlags(), allNames()))
+    }
+    
+    public static func allSpecialFlagsAndNames() -> [Country] {
+        return Array(zip(allSpecialFlags(), allSpecialNames()))
     }
 }
 
