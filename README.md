@@ -21,8 +21,8 @@ For OSX, just replace `UIImage` with `NSImage` below
 
 Get an icon for your locale or a world flag:
 ```swift
-UIImage(flagImageWithCountryCode: NSLocale.autoupdatingCurrentLocale().objectForKey(NSLocaleCountryCode) as! String)
-UIImage(flagImageForSpecialFlag: .World)
+FlagKit.flagAtCurrentLocale()
+FlagKit.Special.World
 ```
 ```objc
 [UIImage flagImageWithCountryCode:[[NSLocale autoupdatingCurrentLocale] objectForKey:NSLocaleCountryCode]];
