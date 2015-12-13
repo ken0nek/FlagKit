@@ -854,13 +854,11 @@ extension FlagKit {
 
 extension FlagKit {
 
-    public typealias Country = (flag: UIImage?, name: String)
-
-    public static func allFlagsAndNames() -> [Country] {
+    public static func allFlagsAndNames() -> [(flag: UIImage?, name: String)] {
         return Array(zip(FlagKit.allFlags(), FlagKit.allNames()))
     }
 
-    public static func allSpecialFlagsAndNames() -> [Country] {
+    public static func allSpecialFlagsAndNames() -> [(flag: UIImage?, name: String)] {
         return Array(zip(allSpecialFlags(), allSpecialNames()))
     }
 }
