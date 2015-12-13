@@ -456,6 +456,13 @@ extension FlagKit {
 
 extension FlagKit {
     
+    public static func flagAtCurrentLocale() -> NSImage? {
+        return flagImage(flagCode: NSLocale.autoupdatingCurrentLocale().objectForKey(NSLocaleCountryCode) as! String)
+    }
+}
+
+extension FlagKit {
+    
     private static func flagImage(flagCode code: String) -> NSImage? {
         return NSImage(flagCode: code)
     }
